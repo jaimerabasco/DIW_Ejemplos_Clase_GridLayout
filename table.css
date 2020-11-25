@@ -1,0 +1,30 @@
+
+
+#table{
+	display: table;
+	*width: 100%;
+}
+
+.row{
+	display: table-row;
+	*width: 100%;
+}
+
+.cell{
+	border: 1px solid black;
+	display: table-cell;
+	*width: 10%;
+    background: #345678;
+}
+
+.col1{
+	width: 20%;
+}
+
+.col2{
+	width: 30%;
+}
+
+.col3{
+	width: 70%;
+}
