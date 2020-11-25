@@ -1,0 +1,67 @@
+body{
+}
+
+main{
+	background-color: #C5CAE9;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 100px 100px 100px 100px;
+	grid-gap: 10px 10px;
+	grid-auto-rows: 40vh;
+
+}
+
+/*Para las grid-template-areas establecemos nombres a las cajas del grid, para luego gestionarlas en el grid-template-areas.
+*/
+
+article.header{
+	grid-area: header;
+}
+
+article.nav{
+	grid-area: nav;
+}
+
+article.main{
+	grid-area: main;
+}
+
+article.aside{
+	grid-area: aside;
+}
+
+article.footer{
+	grid-area: footer;
+}
+
+/*
+Una vez tenemos las grid-areas defifinidas, nombramos esa area por cada rejilla que quieres que ocupe en el template, por ejemplo
+header header header header
+nav nav nav nav nav
+main main main aside
+footer footer footer footer
+*/
+
+main{
+	
+	grid-template-areas:
+		"header header header header"
+		"nav nav nav aside"
+		"main main main aside"
+		"footer footer footer aside";
+
+}
+
+	
+
+article{
+	font-size: 3rem;
+}
+
+article:nth-child(2n){
+	background-color: #303F9F;
+}
+
+article:nth-child(2n+1){
+	background-color: #5C6BC0;
+}

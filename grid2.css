@@ -1,0 +1,66 @@
+body{
+}
+
+main{
+	background-color: #C5CAE9;
+	display: grid;
+	grid-gap: 10px 10px;
+	grid-template-columns: repeat(4,1fr);
+	grid-template-rows: 100px 100px 100px;
+
+
+	/* grid-auto-flow => Como quieres que se conporte el flujo de cajas hijas de grid, en fila o en columna (Se suele usar con order)
+	Flujo de columna: 
+		en el grid => grid-auto-flow: column;
+		en los hijos grid => order:1;
+
+	Flujo de fila: 
+		en el grid => grid-auto-flow: row;
+		en los hijos grid => order:1;
+	*/
+
+	grid-auto-flow: column;
+
+
+
+}
+
+/*Establecer las areas desde las clases hijas indicando los tracks de inicio y fin de fila y columna
+article:nth-child(1){
+	grid-area: 2 / 2 / 3 / 5;
+	*order: 1;
+}
+*/
+article:nth-child(1){
+	order: 2;
+}
+
+article:nth-child(6){
+	order: 1;
+}
+
+article{
+	order: 3;
+}
+
+
+
+
+	
+
+
+.item1,.item2,.item3{
+	*grid-area: header;
+}
+
+article{
+	font-size: 3rem;
+}
+
+article:nth-child(2n){
+	background-color: #303F9F;
+}
+
+article:nth-child(2n+1){
+	background-color: #5C6BC0;
+}

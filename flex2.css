@@ -1,0 +1,43 @@
+#container{
+    display:flex;
+    *flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    flex:1;
+    *flex-grow: 1;
+    order: 1;
+    width: 300px;
+    text-align: center;
+    height: 300px;
+}
+
+main{
+    flex:3;
+    *flex-grow: 3;
+    order:2;
+    width: 300px;
+    text-align: center;
+    height: 400px;
+}
+
+aside{
+    flex:1;
+    *flex-grow: 1;
+    order:3;
+    width: 300px;
+    text-align: center;
+    height: 200px;
+}
+
+nav,main,aside{
+    flex-basis: auto;
+    flex-basis: 0;
+}
+
+#container :nth-child(n){
+    *flex-basis: auto;
+    *flex-basis: 0;
+}

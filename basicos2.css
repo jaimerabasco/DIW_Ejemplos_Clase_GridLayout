@@ -1,0 +1,25 @@
+header{
+    background-color: orange;
+    min-height: 200px;
+}
+
+#container{
+    min-height: 500px;
+}
+
+nav{
+    background-color: red;
+}
+
+main{
+    background-color: green;
+}
+
+aside{
+    background-color: blue;
+}
+
+footer{
+    background-color: yellow;
+    min-height: 200px;
+}
